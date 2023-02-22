@@ -1,0 +1,15 @@
+{
+    "cart": 900000,
+    "products": [
+        {
+            "name": "cic",
+            "imgName": "1.jpg",
+            "price": 5000
+        },
+        {
+            "name": "macs",
+            "imgName": "2.jpg",
+            "price": 100
+        }
+    ]
+}
