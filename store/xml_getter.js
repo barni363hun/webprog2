@@ -19,6 +19,7 @@ function loadDoc(url) {
 
 function myFunction() {
   var i;
+  var selHTML = "<select>";
   var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
   for (i = 0; i <x.length; i++) { 
@@ -27,8 +28,12 @@ function myFunction() {
     "</td><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
     "</td></tr>";
+    selHTML+="<option value='"+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"'>"
+    +x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</option>"
   }
+  selHTML+="</select>"
   document.getElementById("myTable").innerHTML = table;
+  document.getElementById("sel").innerHTML = selHTML
 }
 
 function newTable(){
