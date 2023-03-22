@@ -5,6 +5,9 @@ function loadDoc(url) {
   http.onreadystatechange = function () {
       if (http.readyState == 4 &&
           http.status == 200) { 
+            document.getElementById("code").innerHTML = String(http.readyState)
+            document.getElementById("status").innerHTML = String(http.status)
+            document.getElementById("text").innerHTML = String(http.responseText)
             // alert(httpKeres.responseText);
             xmlDoc = this.responseXML;
             myFunction();
