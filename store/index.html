@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="nums.js"></script>
+    <script src="xml_getter.js"></script>
 </head>
 <body>
     <button onclick="nums()">Számok bekérése</button>
-    <p id="out"></p>
+    <button onclick="loadDoc('cd_catalog.xml')">xml</button>
+    <table id="myTable"></table>
+    <input id="in" type="text">
+    <button onclick="newTable()">Új szűrt táblázat</button>
+    <table id="newTable"></table>
 </body>
 </html>
