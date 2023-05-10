@@ -17,11 +17,30 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo $row["RENTERNAME"]." - ";
-    echo $row["CARMODELL"]." - ";
-    echo $row["PICKUPDATE"]." - ";
-    echo $row["DROPOFFDATE"]." - ";
-    echo $row["PRICE"]." <br>";
+    echo "<tr>
+    <th>neve</th>
+    <th>model</th>
+    <th>átvétel</th>
+    <th>visszavétel</th>
+    <th>fizetendő</th></tr>";
+    echo "<tr>";
+    echo "<td> ";
+    echo $row["RENTERNAME"];
+    echo "</td>";
+    echo "<td> ";
+    echo $row["CARMODELL"];
+    echo "</td>";
+    echo "<td> ";
+    echo $row["PICKUPDATE"];
+    echo "</td>";
+    echo "<td> ";
+    echo $row["DROPOFFDATE"];
+    echo "</td>";
+    echo "<td> ";
+    echo $row["PRICE"];
+    echo "</td>";
+    echo "</tr>";
+
   }
 } else {
   echo "0 results";

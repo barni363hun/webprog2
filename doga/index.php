@@ -51,6 +51,7 @@ var ar = 8000 + (t?2000:0)+ (c?0:2000);
 <body>
     <h1>Princzes Barnabás - oi24o2</h1>
     <form action="insert.php" method="post">
+        
         fajta:
         <select name="CARMODELL" id="CARMODELL">
             <option value="audi">audi</option>
@@ -67,6 +68,12 @@ var ar = 8000 + (t?2000:0)+ (c?0:2000);
             <option value="4">4</option>
             <option value="5">4+</option>
         </select>
+        <br>
+        <input type="date" name="PICKUPDATE" id="" disabled>
+        <br>
+        <input type="date" name="DROPOFFDATE" id="" disabled>
+        <br>
+        <input type="text" name="RENTERNAME" disabled>
         <br>
         <input type="number" name="PRICE" id="PRICE" value="8000" hidden>
         <input type="submit" value="Mentés">
